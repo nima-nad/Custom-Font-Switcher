@@ -26,3 +26,7 @@ footer { border-top: 1px solid #dedfd6; padding-top: 14px; font-size: 11px; colo
 .google input { width: 100%; margin-top: 8px; padding: 10px; border: 1px solid #c6cbbb; border-radius: 8px; font: inherit; background: #fffef9; }
 .google button { background: #52672d; color: white; border: 0; }
 .google small { display: block; margin-top: 8px; color: #717365; font-size: 11px; }
+
+.logo { flex-shrink: 0; border-radius: 9px; }
+h1 { font-size: 17px; }
+footer a { color: #52672d; }

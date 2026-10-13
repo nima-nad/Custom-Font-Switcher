@@ -1,35 +1,41 @@
-# Font Switcher
+# Custom Font Switcher
 
-Use a custom TTF or a Google Font on websites. No build tools or account needed.
+![Custom Font Switcher logo](icons/icon128.png)
 
-## Install or update
+Make website text feel like yours. Use your own TTF or choose a Google Font, preview it, and switch back whenever you like.
 
-1. Extract the ZIP into a folder.
-2. Open chrome://extensions and turn on Developer mode.
-3. Choose Load unpacked and select the folder containing manifest.json. If already installed from that folder, click Reload instead.
-4. Refresh your website tabs and open Font Switcher.
+## Get the extension
 
-## Choose a font
+The Chrome Web Store listing is being prepared. A store installation link will be added here after approval.
 
-- Upload a .ttf file (up to 5 MB), or
-- Enter a Google Fonts name or link and click Use Google Font. Example: Inter or https://fonts.google.com/specimen/Inter.
+## How to use
 
-Keep the popup open until the download finishes. Google imports use the regular style; bold and italic may be synthesized. CSS links use the first family and ignore custom weight/text parameters. The font is saved locally and works offline after import. Your existing custom font is retained when updating.
+1. Open Custom Font Switcher from Chrome's extensions menu.
+2. Upload a `.ttf` file (up to 5 MB), or enter a Google Fonts name or link and click **Use Google Font**.
+3. Keep the popup open until the import finishes. Your selected font is enabled automatically.
 
-Switch off to restore website fonts. Remove font deletes the saved font.
+Example: `Inter` or `https://fonts.google.com/specimen/Inter`.
 
-## Limits
+Use **Use on websites** to switch the font on or off. **Remove font** deletes the saved font and restores original website fonts. Your selection stays saved between browser sessions and works offline after import.
 
-Changes website text, not Chrome menus, internal pages, the Chrome Web Store, or the PDF viewer. Some website icons and layouts may be affected. Shadow DOM, images, canvas text, and certain overriding styles are not supported. Missing characters use a fallback font.
+## What it changes
+
+Regular text on most HTTP and HTTPS websites. It does not change Chrome menus, settings, the Chrome Web Store, the built-in PDF viewer, or text in images and videos. Some icons and layouts may be affected. Shadow DOM and canvas text are not supported, and some website styles can override the font.
+
+Google imports use the regular style; bold and italic may be synthesized. CSS links use the first family and ignore weight and text parameters. Characters missing from a font use a fallback.
 
 ## Privacy
 
-Custom files never upload. Google imports contact fonts.googleapis.com and fonts.gstatic.com, so Google receives the requested font and normal connection information, including your IP address. No analytics or browsing-history collection. See PRIVACY.md.
+Installing from the store does not upload your fonts. Custom files, downloaded fonts, and your setting stay in local extension storage. Google Fonts imports contact Google, which receives the requested font and normal network information, including your IP address. No analytics, ads, or browsing-history collection.
 
-Use fonts you have permission to use. No fonts are bundled with this extension.
+Read the [privacy policy](PRIVACY.md). Use fonts you have permission to use. No font files are bundled. This project is not affiliated with or endorsed by Google.
 
-## Files
+## For developers
 
-manifest.json declares permissions; popup files provide the interface; google-fonts.js downloads and validates fonts; content.js applies them to websites. No dependencies or build step.
+No dependencies or build step. To test the source, open `chrome://extensions`, enable Developer mode, select **Load unpacked**, and choose this folder. Reload the extension and refresh website tabs after changes.
 
-Before store submission, add icons and listing screenshots and publish the privacy policy at a public URL. The ZIP has manifest.json at its root.
+- `popup.html`, `popup.css`, `popup.js`: interface and saved preferences.
+- `google-fonts.js`: Google Fonts import and validation.
+- `content.js`: applies saved fonts to pages.
+- `manifest.json`: extension settings and permissions.
+- `icons/`: extension logo sizes.

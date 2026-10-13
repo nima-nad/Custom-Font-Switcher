@@ -1,18 +1,18 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Font Switcher</title><link rel="stylesheet" href="popup.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Custom Font Switcher</title><link rel="stylesheet" href="popup.css"></head>
 <body>
-  <header><span class="mark" aria-hidden="true">Aa</span><div><h1>Font Switcher</h1><p>Your font. On every website.</p></div></header>
+  <header><img class="logo" src="icons/icon128.png" width="48" height="48" alt=""><div><h1>Custom Font Switcher</h1><p>Your font. Across the web.</p></div></header>
   <main>
     <label class="upload" for="font-file"><strong>Upload a font</strong><span>Import a .ttf file · up to 5 MB</span><input id="font-file" type="file" accept=".ttf,font/ttf"></label>
-    <form id="google-form" class="google"><label for="google-link"><strong>Or use Google Fonts</strong></label><input id="google-link" type="text" placeholder="Font name or Google Fonts link" required maxlength="2000"><button id="google-apply" type="submit">Use Google Font</button><small>Downloaded from Google and saved on this device. Keep this popup open while loading.</small></form>
+    <form id="google-form" class="google"><label for="google-link"><strong>Or use Google Fonts</strong></label><input id="google-link" type="text" placeholder="Font name or Google Fonts link" required maxlength="2000"><button id="google-apply" type="submit">Use Google Font</button><small>Importing contacts Google, which receives your IP address and font request. Saved on this device afterward. Keep this popup open while loading.</small></form>
     <p id="font-name">No font selected</p>
     <section class="preview" aria-label="Font preview"><span class="eyebrow">THE PREVIEW</span><p id="sample">The quick brown fox.<br>0123456789</p></section>
     <label class="toggle"><span>Use on websites</span><input id="enabled" type="checkbox" disabled></label>
     <button id="remove" type="button" disabled>Remove font</button>
     <p id="status" role="status" aria-live="polite"></p>
   </main>
-  <footer>Custom files stay on this device. Google Fonts contacts Google only when you import. Website text only; Chrome menus stay unchanged.</footer>
+  <footer>Custom files stay on this device. Google Fonts contacts Google only when you import. Website text only; Chrome menus stay unchanged. <a href="privacy.html" target="_blank" rel="noopener">Privacy policy</a></footer>
   <script src="google-fonts.js"></script>
   <script src="popup.js"></script>
 </body></html>
