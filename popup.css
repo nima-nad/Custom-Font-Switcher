@@ -1,0 +1,28 @@
+:root { color-scheme: light; font: 14px/1.5 system-ui, sans-serif; color: #252620; background: #f7f6f0; }
+* { box-sizing: border-box; }
+body { width: 350px; margin: 0; padding: 24px; }
+header { display: flex; gap: 12px; align-items: center; margin-bottom: 24px; }
+.mark { background: #dce7b7; border-radius: 14px; padding: 9px; font: 28px Georgia, serif; }
+h1 { margin: 0; font-size: 19px; letter-spacing: -.5px; }
+header p { margin: 2px 0 0; color: #717365; font-size: 12px; }
+.upload { display: flex; flex-direction: column; gap: 5px; padding: 18px; border: 1px dashed #929d79; border-radius: 12px; cursor: pointer; background: #fffef9; }
+.upload span { font-size: 12px; color: #717365; }
+input[type=file] { margin-top: 8px; max-width: 100%; font-size: 12px; }
+input::file-selector-button { border: 0; border-radius: 5px; background: #e7ecd9; padding: 6px 9px; margin-right: 8px; cursor: pointer; }
+#font-name { overflow-wrap: anywhere; font-size: 12px; color: #656c54; }
+.preview { border-radius: 12px; padding: 18px; background: #e9eddc; margin: 16px 0; }
+.eyebrow { font-size: 9px; letter-spacing: 2px; color: #5d6749; }
+#sample { font: 26px/1.5 Georgia, serif; margin: 12px 0 0; overflow-wrap: anywhere; }
+.toggle { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; font-weight: 600; }
+input[type=checkbox] { accent-color: #52672d; width: 20px; height: 20px; }
+button { width: 100%; border: 1px solid #d6d8cd; border-radius: 8px; background: transparent; padding: 9px; margin-top: 10px; cursor: pointer; color: #54594b; }
+button:disabled { opacity: .45; cursor: default; }
+:focus-visible { outline: 2px solid #52672d; outline-offset: 3px; }
+#status { font-size: 12px; min-height: 18px; margin-bottom: 8px; }
+#status.error { color: #a33424; }
+footer { border-top: 1px solid #dedfd6; padding-top: 14px; font-size: 11px; color: #717365; }
+
+.google { margin-top: 18px; }
+.google input { width: 100%; margin-top: 8px; padding: 10px; border: 1px solid #c6cbbb; border-radius: 8px; font: inherit; background: #fffef9; }
+.google button { background: #52672d; color: white; border: 0; }
+.google small { display: block; margin-top: 8px; color: #717365; font-size: 11px; }
